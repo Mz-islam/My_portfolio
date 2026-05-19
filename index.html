@@ -844,7 +844,6 @@
 
   <!-- ═══ ABOUT ═══ -->
   <section id="about">
-    <p class="section-label">// 01</p>
     <h2 class="section-title">About Me</h2>
     <div class="section-divider"></div>
     <div class="about-grid">
@@ -922,7 +921,6 @@
 
   <!-- ═══ EXPERIENCE ═══ -->
   <section id="experience">
-    <p class="section-label">// 02</p>
     <h2 class="section-title">Experience</h2>
     <div class="section-divider"></div>
     <div class="timeline">
@@ -957,7 +955,6 @@
 
   <!-- ═══ EDUCATION ═══ -->
   <section id="education">
-    <p class="section-label">// 03</p>
     <h2 class="section-title">Education</h2>
     <div class="section-divider"></div>
     <div class="edu-grid">
@@ -985,7 +982,6 @@
 
   <!-- ═══ SKILLS ═══ -->
   <section id="skills">
-    <p class="section-label">// 04</p>
     <h2 class="section-title">Skills &amp; Certificates</h2>
     <div class="section-divider"></div>
 
@@ -1019,19 +1015,19 @@
       Certificates</h4>
     <div class="badges-wrap">
       <span class="badge accent">🏅 Canva Design Certificate</span>
+       <span class="badge accent">⚛ Build and Train an LLM with JAX</span>
     </div>
   </section>
 
   <!-- ═══ AFFILIATIONS ═══ -->
   <section id="affiliations">
-    <p class="section-label">// 05</p>
     <h2 class="section-title">Professional Affiliations</h2>
     <div class="section-divider"></div>
     <div class="affil-grid">
 
       <div class="affil-card">
         <div class="affil-icon">🔐</div>
-        <p class="affil-title">Cyber Security Club</p>
+        <p class="affil-title">Daffodil AI Club</p>
         <p class="affil-sub">Member · Daffodil International University</p>
       </div>
 
@@ -1052,7 +1048,6 @@
 
   <!-- ═══ CONTACT ═══ -->
   <section id="contact">
-    <p class="section-label">// 06</p>
     <h2 class="section-title">Get In Touch</h2>
     <div class="section-divider"></div>
     <div class="contact-grid">
@@ -1062,7 +1057,7 @@
           <div class="ci-icon">📞</div>
           <div>
             <p class="ci-label">Phone</p>
-            <p class="ci-val"><a href="tel:+8801751936216">+880 1751 936216</a></p>
+            <p class="ci-val"><a href="tel:+8801751936216">+880 1751-936216</a></p>
           </div>
         </div>
         <div class="contact-item">
@@ -1097,7 +1092,7 @@
           <p style="font-weight:600;margin-bottom:.2rem">MD. RASEDUL ISLAM</p>
           <p style="color:var(--muted);font-size:.85rem">Assistant Professor</p>
           <p style="color:var(--muted);font-size:.87rem">Daffodil International University</p>
-          <p style="color:var(--muted);font-size:.82rem;margin-top:.5rem">📞 +880 1746255511</p>
+          <p style="color:var(--muted);font-size:.82rem;margin-top:.5rem">📞 +880 1746-255511</p>
           <p style="color:var(--muted);font-size:.82rem">✉️ rasedul.cse@diu.edu.bd</p>
         </div>
       </div>
@@ -1107,24 +1102,28 @@
           Feel free to reach out for collaboration, research opportunities, or just a friendly chat about technology and
           innovation.
         </p>
-        <div class="contact-form">
-          <div class="form-field">
-            <label>Your Name</label>
-            <input type="text" placeholder="John Doe" />
-          </div>
-          <div class="form-field">
-            <label>Email Address</label>
-            <input type="email" placeholder="john@example.com" />
-          </div>
-          <div class="form-field">
-            <label>Message</label>
-            <textarea placeholder="Write your message here…"></textarea>
-          </div>
-          <button class="btn btn-primary" style="align-self:flex-start"
-            onclick="alert('Note: This form is a visual demo. Please email muzahidul2004@gmail.com directly.')">Send
-            Message →</button>
-        
-        </div>
+        <form class="contact-form" action="https://formspree.io/f/mredbrqb" method="POST">
+  <div class="form-field">
+    <label>Your Name</label>
+    <input type="text" name="name" placeholder="John Doe" required />
+  </div>
+
+  <div class="form-field">
+    <label>Email Address</label>
+    <input type="email" name="email" placeholder="john@example.com" required />
+  </div>
+
+  <div class="form-field">
+    <label>Message</label>
+    <textarea name="message" placeholder="Write your message here..." required></textarea>
+  </div>
+
+  <button class="btn btn-primary" type="submit" style="align-self:flex-start">
+    Send Message →
+  </button>
+
+  <p class="form-note">Your message will be sent directly to my email.</p>
+</form>
       </div>
 
     </div>
@@ -1132,10 +1131,10 @@
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
-    <p>© 2025 MD Muzahidul Islam. Built with ♥ for Google Sites.</p>
+    <p>© 2025 Md Muzahidul Islam. Built with Google Sites.</p>
     <div class="footer-links">
       <a href="mailto:muzahidul2004@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/muzahidul-islam-muzahid/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/muzahidul-islam-muzahid" target="_blank">LinkedIn</a>
       <a href="#home">Back to Top ↑</a>
     </div>
   </footer>

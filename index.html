@@ -228,6 +228,50 @@
       background: linear-gradient(to bottom, var(--accent), transparent);
       animation: scrollPulse 1.8s infinite;
     }
+    .hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.hero-left {
+  max-width: 650px;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: min(390px, 90%);
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 26px;
+  border: 1px solid rgba(0, 229, 204, 0.18);
+  box-shadow: 
+    0 30px 90px rgba(0, 229, 204, 0.12),
+    0 0 0 8px rgba(255, 255, 255, 0.02);
+  filter: grayscale(8%) contrast(105%);
+  animation: fadeUp .8s .7s forwards;
+  opacity: 0;
+}
+
+.hero-right::before {
+  content: '';
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(0, 229, 204, 0.15), transparent 65%);
+  z-index: -1;
+  filter: blur(8px);
+}
 
     /* ─── SECTIONS ─── */
     section {
@@ -758,6 +802,26 @@
       section {
         padding: 5rem 6vw;
       }
+      .hero-content {
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-top: 6rem;
+}
+
+.hero-right {
+  justify-content: flex-start;
+}
+
+.hero-img {
+  width: 280px;
+  height: 360px;
+  border-radius: 20px;
+}
+
+.hero-right::before {
+  width: 260px;
+  height: 260px;
+}
 
       #home {
         padding: 0 6vw;
@@ -823,25 +887,45 @@
   </nav>
 
   <!-- ═══ HERO ═══ -->
-  <section id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-noise"></div>
-    <p class="hero-tag">CSE Student · Research Enthusiast · ML Explorer</p>
-    <h1 class="hero-name">MD<br>Muzahidul<br><span>Islam</span></h1>
-    <p class="hero-sub">
-      Passionate about Machine Learning, community building, and innovation.
-      Currently pursuing BSc in Computer Science at Daffodil International University, Dhaka.
-    </p>
-    <div class="hero-ctas">
-      <a href="#contact" class="btn btn-primary">Get in Touch</a>
-      <a href="#about" class="btn btn-outline">View Portfolio</a>
-    </div>
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-noise"></div>
 
+  <div class="hero-content">
+    <div class="hero-left">
+      <p class="hero-tag">CSE Student · Research Enthusiast · Future AI Engineer</p>
+
+      <h1 class="hero-name">
+        Md<br>
+        Muzahidul<br>
+        <span>Islam</span>
+      </h1>
+
+      <p class="hero-sub">
+        Passionate about Machine Learning, community building, and innovation.
+        Currently pursuing BSc in Computer Science at Daffodil International University, Dhaka.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#about" class="btn btn-outline">View Portfolio</a>
+      </div>
+    </div>
+
+  <div class="hero-right">
+  <img 
+    src="https://drive.google.com/thumbnail?id=1PdyprhLoTT5l70NgUVTkr-qspsknADd0&sz=w1000"
+    alt="Md Muzahidul Islam"
+    class="hero-img"
+  >
+</div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
   <!-- ═══ ABOUT ═══ -->
   <section id="about">
     <h2 class="section-title">About Me</h2>
@@ -850,27 +934,28 @@
       <div class="about-text">
         <p>
           I'm a passionate and dedicated research enthusiast with hands-on experience
-          in leading ML initiatives and representing research platforms.
+          AI-based projects, machine learning initiatives and technology-focused 
+          community activities.
         </p>
         <p>
-          With a proven track record in engaging communities, promoting technology,
-          and fostering innovation through volunteer and brand ambassador roles,
-          I excel at motivating teams, organizing events, and building partnerships
-          to advance Research education and outreach.
+          I am actively exploring Generative AI, Machine Learning, AI Engineering 
+          and Agentic AI while building practical projects in areas like AI CV analysis, 
+          healthcare intelligence, automation, and intelligent systems. 
+          I am motivated to learn, collaborate and contribute to innovative 
+          solutions that create real impact.
         </p>
         <div class="about-info">
           <div class="info-row"><span class="info-label">Phone</span><span class="info-val">+880 1751 936216</span>
           </div>
           <div class="info-row"><span class="info-label">Email</span><span
-              class="info-val">muzahidul2004@gmail.com</span></div>
-          <div class="info-row"><span class="info-label">Location</span><span class="info-val">Mirpur, Dhaka 1216,
+              class="info-val">islam241-15-786@diu.edu.bd</span></div>
+          <div class="info-row"><span class="info-label">Location</span><span class="info-val">Mirpur 1, Dhaka 1216,
               Bangladesh</span></div>
-          <div class="info-row"><span class="info-label">LinkedIn</span><span class="info-val">MD Muzahidul Islam</span>
+          <div class="info-row"><span class="info-label">LinkedIn</span><span class="info-val">Muzahidul Islam</span>
           </div>
           <div class="info-row"><span class="info-label">Languages</span><span class="info-val">Bengali (Fluent) ·
               English (Intermediate)</span></div>
-          <div class="info-row"><span class="info-label">Hobbies</span><span class="info-val">Photography · Travel ·
-              Gardening · Hiking</span></div>
+          <div class="info-row"><span class="info-label">Hobbies</span><span class="info-val">Photography · Traveling · Hiking · Wathcing Movies</span></div>
         </div>
       </div>
 
@@ -879,9 +964,9 @@
           Proficiency</h3>
 
         <div class="skill-item">
-          <div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">80%</span></div>
+          <div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">70%</span></div>
           <div class="skill-bar">
-            <div class="skill-fill" data-w="80"></div>
+            <div class="skill-fill" data-w="70"></div>
           </div>
         </div>
         <div class="skill-item">
@@ -891,7 +976,13 @@
           </div>
         </div>
         <div class="skill-item">
-          <div class="skill-top"><span class="skill-name">Java</span><span class="skill-pct">65%</span></div>
+          <div class="skill-top"><span class="skill-name">ML</span><span class="skill-pct">55%</span></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-w="55"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">Generative AI</span><span class="skill-pct">65%</span></div>
           <div class="skill-bar">
             <div class="skill-fill" data-w="65"></div>
           </div>
@@ -903,9 +994,9 @@
           </div>
         </div>
         <div class="skill-item">
-          <div class="skill-top"><span class="skill-name">Canva Design</span><span class="skill-pct">85%</span></div>
+          <div class="skill-top"><span class="skill-name">Canva Design</span><span class="skill-pct">80%</span></div>
           <div class="skill-bar">
-            <div class="skill-fill" data-w="85"></div>
+            <div class="skill-fill" data-w="80"></div>
           </div>
         </div>
         <div class="skill-item">
@@ -927,7 +1018,7 @@
 
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <p class="tl-year">2024 — 2025</p>
+        <p class="tl-year">2024 — Present</p>
         <h3 class="tl-role">Associate Member</h3>
         <p class="tl-org">DIUCPC · Daffodil International University</p>
         <p class="tl-desc">
@@ -940,13 +1031,23 @@
       <!-- Placeholder — add more roles as your career grows -->
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <p class="tl-year">2023 — Present</p>
+        <p class="tl-year">2025 — Present</p>
         <h3 class="tl-role">ML Researcher</h3>
         <p class="tl-org">DIU NLP & ML Research Lab</p>
-        <p class="tl-org">Daffodil International University · Asulia, Dhaka</p>
+        <p class="tl-org">Daffodil International University</p>
         <p class="tl-desc">
           Conducting research in Machine Learning and Natural Language Processing under Daffodil International University NLP & ML Research Lab.
-          Simultaneously building community presence through the Cyber Security Club and various tech events.
+        </p>
+      </div>
+
+            <div class="tl-item">
+        <div class="tl-dot"></div>
+        <p class="tl-year">2026 — Present</p>
+        <h3 class="tl-role">General Member</h3>
+        <p class="tl-org">Daffodil AI Club</p>
+        <p class="tl-org">Daffodil International University</p>
+        <p class="tl-desc">
+          Participating in various AI programs, seminars, and learning activities focused on **Generative AI, Machine Learning, AI Engineering, and Agentic AI**, with a strong interest in becoming a future AI professional and innovator.
         </p>
       </div>
 
@@ -989,12 +1090,13 @@
       style="font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;font-family:'Space Mono',monospace">
       Technical</h4>
     <div class="badges-wrap" style="margin-bottom:2.5rem">
-      <span class="badge accent">Python</span>
-      <span class="badge accent">Java</span>
-      <span class="badge accent">C / C++</span>
+      <span class="badge">Python</span>
+      <span class="badge">C / C++</span>
       <span class="badge">Cloud Platforms</span>
-      <span class="badge">Machine Learning</span>
+      <span class="badge">Machine Learning Fundamentals</span>
       <span class="badge">NLP</span>
+      <span class="badge">Generative AI</span>
+       <span class="badge">API-based AI System</span>
       <span class="badge">Canva Design</span>
     </div>
 
@@ -1011,7 +1113,7 @@
     </div>
 
     <h4
-      style="font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;font-family:'Space Mono',monospace">
+      style="font-size:.10rem;color:var(--muted);text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem;font-family:'Space Mono',monospace">
       Certificates</h4>
     <div class="badges-wrap">
       <span class="badge accent">🏅 Canva Design Certificate</span>
@@ -1026,9 +1128,9 @@
     <div class="affil-grid">
 
       <div class="affil-card">
-        <div class="affil-icon">🔐</div>
+        <div class="affil-icon">🧠</div>
         <p class="affil-title">Daffodil AI Club</p>
-        <p class="affil-sub">Member · Daffodil International University</p>
+        <p class="affil-sub">General Member · Daffodil International University</p>
       </div>
 
       <div class="affil-card" style="transition-delay:.15s">
@@ -1064,14 +1166,14 @@
           <div class="ci-icon">✉️</div>
           <div>
             <p class="ci-label">Email</p>
-            <p class="ci-val"><a href="mailto:muzahidul2004@gmail.com">muzahidul2004@gmail.com</a></p>
+            <p class="ci-val"><a href="mailto:islam241-15-786@diu.edu.bd">islam241-15-786@diu.edu.bd</a></p>
           </div>
         </div>
         <div class="contact-item">
           <div class="ci-icon">📍</div>
           <div>
             <p class="ci-label">Location</p>
-            <p class="ci-val">Mirpur, Dhaka 1216, Bangladesh</p>
+            <p class="ci-val">Mirpur 1, Dhaka 1216, Bangladesh</p>
           </div>
         </div>
         <div class="contact-item">

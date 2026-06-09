@@ -1405,6 +1405,33 @@
       }
     }
 
+    /* ===== CURSOR GLOW ===== */
+
+    #cursor-glow {
+      position: fixed;
+
+      width: 320px;
+      height: 320px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(circle,
+          rgba(0, 201, 167, 0.10) 0%,
+          rgba(123, 94, 167, 0.06) 35%,
+          transparent 72%);
+
+      pointer-events: none;
+
+      z-index: 0;
+
+      transform: translate(-50%, -50%);
+
+      filter: blur(10px);
+
+      mix-blend-mode: screen;
+    }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
       section {
@@ -1532,6 +1559,7 @@
 
 <body>
 
+  <div id="cursor-glow"></div>
   <canvas id="particles"></canvas>
 
   <div class="space-bg"></div>
@@ -2163,6 +2191,38 @@
     }
 
     animateParticles();
+  </script>
+  <script>
+    const glow =
+      document.getElementById('cursor-glow');
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let currentX = 0;
+    let currentY = 0;
+
+    document.addEventListener('mousemove', e => {
+
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+    });
+
+    function animateGlow() {
+
+      currentX += (mouseX - currentX) * 0.08;
+
+      currentY += (mouseY - currentY) * 0.08;
+
+      glow.style.left = currentX + 'px';
+
+      glow.style.top = currentY + 'px';
+
+      requestAnimationFrame(animateGlow);
+    }
+
+    animateGlow();
   </script>
 </body>
 
